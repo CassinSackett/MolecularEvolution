@@ -37,17 +37,26 @@ You can silence notifications outside of your preferred working hours.
 
 Windows:
 -[Cyberduck](https://cyberduck.ch/) or [Filezilla](https://filezilla-project.org/) (for file transfer via sFTP)
+
 -[Git for Windows](https://gitforwindows.org/) (a Unix emulator for running command-line programs)
+
 -[Notepad](https://notepad-plus-plus.org/downloads/v8.4.7/) (Important - After you have installed it, open and go to Settings, Preferences, New Document, and set the line endings to Unix)
+
 -[Seaview](https://doua.prabi.fr/software/seaview) (used to visualize small alignments)
+
 -[FigTree](https://github.com/rambaut/figtree/releases) (used to visualize phylogenetic trees)
+
 -[Tracer](https://github.com/beast-dev/tracer/releases/) (used for Bayesian divergence time analyses)
 
 MacOS:
 -[Cyberduck](https://cyberduck.ch/) or [Filezilla](https://filezilla-project.org/) (for file transfer via sFTP)
+
 -[BBEdit](https://www.barebones.com/products/bbedit/) (for fast text manipulation)
+
 -[Seaview](https://doua.prabi.fr/software/seaview) (used to visualize small alignments)
+
 -[FigTree](https://github.com/rambaut/figtree/releases) (used to visualize phylogenetic trees)
+
 -[Tracer](https://github.com/beast-dev/tracer/releases/) (used for Bayesian divergence time analyses)
 
 We will use additional software throughout the course that will be available, primarily via conda environments, on LONI. 
