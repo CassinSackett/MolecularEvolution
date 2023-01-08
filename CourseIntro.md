@@ -42,6 +42,7 @@ Windows:
 -[Seaview](https://doua.prabi.fr/software/seaview) (used to visualize small alignments)
 -[FigTree](https://github.com/rambaut/figtree/releases) (used to visualize phylogenetic trees)
 -[Tracer](https://github.com/beast-dev/tracer/releases/) (used for Bayesian divergence time analyses)
+-[MEGA](https://megasoftware.net/) (used to visualize small alignments and generate prior trees)
 
 MacOS:
 -[Cyberduck](https://cyberduck.ch/) or [Filezilla](https://filezilla-project.org/) (for file transfer via sFTP)
@@ -49,6 +50,7 @@ MacOS:
 -[Seaview](https://doua.prabi.fr/software/seaview) (used to visualize small alignments)
 -[FigTree](https://github.com/rambaut/figtree/releases) (used to visualize phylogenetic trees)
 -[Tracer](https://github.com/beast-dev/tracer/releases/) (used for Bayesian divergence time analyses)
+-[MEGA](https://megasoftware.net/) (used to visualize small alignments and generate prior trees)
 
 We will use additional software throughout the course that will be available, primarily via conda environments, on LONI. 
 
