@@ -13,16 +13,20 @@ Molecular Evolution "Lab" - Getting Started
 ## Acknowledgments
 Most of the material in this course was modeled after publicly available resources from the Woods Hole course in Molecular Evolution. Contributors to that course are deeply appreciated!
 
+## A Note on Computing
+Increasingly, biological research requires competent computing skills including the ability to install and navigate domain-specific software. The only way to learn computing skills is to practice them yourself. However, this does not mean you have to code by yourself in a dark room. When you run into a problem, talk about your code with your classmates, read about similar problems on StackOverflow, and spend time on Google learning about how other people have solved the problems. Consider these challenges to be learning opportunities and chances to be resourceful.    
+
+
 ## Getting set up on LONI
 
 If you do not yet have a LONI (our HPC - Louisiana Optical Network Infrastructure) account, start here!
 
-1. Visit https://allocations.loni.org/ to sign up for an account
+1. Visit https://allocations.loni.org/ to sign up for an account. I am your account sponsor (my user name is sackettl).
 2. Learn about our computing resources here http://www.hpc.lsu.edu/index.php
 3. If you are new to Unix, please watch the "Introduction to Linux" video here http://www.hpc.lsu.edu/training/archive/tutorials.php
 4. If you are new to remote computing environments, please watch the two "HPC User Environment" recordings here http://www.hpc.lsu.edu/training/archive/tutorials.php
 
-Once you have a LONI account and have familiarized yourself with its directory structure and how to appropriately use shared files and directories, please email me your username so that I can add you to our class's project directory.
+Once you have a LONI account and have familiarized yourself with its directory structure and how to appropriately use shared files and directories, please email me your username so that I can add you to our class's project directory and computing allocation.
 
 
 ## Joining the Slack Workspace
