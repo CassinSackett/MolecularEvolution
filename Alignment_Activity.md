@@ -2,6 +2,8 @@
 
 ###### tags: `Unix`, `LONI`, `Multiple Sequence Alignment`
 
+Note: This material is generated from the publicly available resources from the Woods Hole Molecular Evolution course. Credit goes to the instructors of that course.
+
 Table of Contents
 [ToC]
 
@@ -17,6 +19,8 @@ Table of Contents
 * background on [MAFFT](https://molevolworkshop.github.io/labs/alignment/MAFFT-background/) and [algorithms used](https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html) in MAFFT
 * background on [MUSCLE](https://molevolworkshop.github.io/labs/alignment/MUSCLE-background/) and [user guide](https://drive5.com/muscle5/manual/commands.html)
 
+### Preface on Using a Cluster
+There are two ways to run computing jobs on QB3 and most other computing clusters: by initiating an interactive session or by submitting a batch job. During an interactive session, you can type commands and run programs on the cluster in real time. Your job will be killed if you log out of QB3 before your commands have finished executing. Interactive sessions are good for short analyses that require limited computing resources or for testing out new software. In contrast, a batch job allows you to submit an analysis to the cluster to be run in the future once the requested computing resources become available. All data and commands are preselected through script files and therefore run to completion without human contact. Batch jobs are good for complex analyses that run on many computing nodes for many hours or days.
 
 ## Today: Alignment in Muscle
 
