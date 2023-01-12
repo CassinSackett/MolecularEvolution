@@ -32,7 +32,7 @@ Today, we will use sequences that are already on LONI, and will download the ali
 
 ### Step 1: Get some sequences to align
 
-You should always work from your /username/work/ directory. Files are deleted after 90 days, but there is no size limit on the directory, so it is perfect for this course. 
+You should always work from your /username/work/ directory. Files are deleted after 90 days, but there is no size limit on the directory, so it is perfect for this course (for files you don't want to lose, like scripts, you can copy them to your home directory where files are stored for longer). 
 
 In your /work/ directory, create a new, empty directory named *MSAlab* and use the following command to copy the sequence files there:
 ```
