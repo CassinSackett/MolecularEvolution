@@ -1,4 +1,4 @@
-# Lab 3: Model Selection in PAUP
+# Lab 2: Model Selection in PAUP
 
 ###### tags: `PAUP*`, `model selection`
 
