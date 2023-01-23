@@ -146,7 +146,7 @@ With most real datasets, you will want to run your PAUP* script in batch rather 
 
 Start with your slurm commands that request a queue, walltime, etc. Be sure to name your output files clearly.
 
-Copy the relevant lines of code from the previous section (but re-name the log file so it doesn't overwrite your previous file) and submit your script! 
+Copy the relevant lines of code from the previous section (but re-name the log file so it doesn't overwrite your previous file). Can you figure out how to convert one of the alignment files from last week's lab into a Nexus file? If so, use that nexus file, edit relevant parameters in your job script, and submit your script! 
 
 :bat: 
 
