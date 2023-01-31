@@ -62,7 +62,7 @@ muscle -log muscle_gene1.log -in gene1.fasta -out muscle_gene1.fasta
     '-in gene1.fasta' specifies the input file to MUSCLE (in version 5, this is replaced by '-align')
     '-out muscle_gene1.fasta' tells MUSCLE to put the alignment in a file you named '*musclegene1.fasta*'.
 4. We also have to tell LONI how to run this script--How much memory will it take? How much time? To whom are we charging the usage? These are specified in the first section of the script with the #SBATCH commands. You will need to edit the output (-o) and error (-e) files, as well as the time (-t) and memory (-n) needed for your particular alignment. In this class, you should always "charge" your computing hours to the allocation (-A) called "loni_molec_evo".
-5. Finally, you also want to get rid of the extra stuff (here, namely, alignment of genes you do not care about). If you are deleting the steps that align other genes (i.e., if you align only one instead of four), adjust the compute time accordingly. Please do not over-charge the computing time! We are all sharing it.
+5. Finally, you also want to get rid of the extra stuff (here, namely, alignment of genes you do not care about). If you are deleting the steps that align other genes (i.e., if you align only one instead of four), or if you decide to run an alignment of long DNA sequences, adjust the compute time accordingly. Please do not over-charge the computing time! We are all sharing it.
 
 
 ### Step 4: Evaluate the MUSCLE alignment
