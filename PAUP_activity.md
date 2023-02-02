@@ -136,9 +136,8 @@ Note that PAUP*'s autopartition capability was inspired by Rob Lanfear's [Partit
 The above is intended to just give a flavor of how PAUP* works. We've barely scratched the surface with respect to what it can do. PAUP* can perform parsimony analysis under a variety of cost schemes, neighbor-joining and criterion-based distance searches using a large number of distance transformations, exact tree searches for smaller numbers of taxa, consensus tree calculation, agreement subtrees, distances between trees, analysis of base frequency composition, likelihood under amino-acid models, likelihood for discrete character data, and much more.
 
 
-:::info
-More info here ➜ [PAUP* website](https://paup.phylosolutions.com/) 
-:::
+## More info here ➜ [PAUP* website](https://paup.phylosolutions.com/) 
+
 
 ### Step 3: Write a PAUP* job script for LONI
 
