@@ -28,7 +28,7 @@ srun --time=1:00:00 --ntasks=8 --nodes=1 --account=loni_molec_evo --partition=si
 
 Take a look at the structure of the Nexus file primate-mtdna.nex in the data folder.
 ```
-less /data/primate-mtdna.nex
+less /data/primate-mtDNA.nex
 ```
 Can you pick out what the different blocks of text are doing?
 
