@@ -85,7 +85,12 @@ Start a RAxML search after changing the ML settings to optimize all parameters:
 lset estall;
 raxml execute=raxml;
 ```
-Note: try runRAxML execute=RAxML;
+Note: This is not working for us.  Instead, try
+
+```
+lset estall;
+svdq;
+```
 
 Now let's optimize the tree from RAxML in PAUP*:
 ```
