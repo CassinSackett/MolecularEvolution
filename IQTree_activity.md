@@ -18,7 +18,7 @@
 
 ### Step 1: View the alignment on your computer
 
-Open the alignment (fasta) file in MEGA and the partition (nexus) file in BBEdit/Notepad. 
+Open the alignment (fasta) file in MEGA and the [partition (nexus) file](http://www.iqtree.org/workshop/data/turtle.nex) in BBEdit/Notepad. 
 :::success
 **QUESTIONS**
 * Can you identify the gene boundary from the viewer? Does it roughly match the partition file?
@@ -38,6 +38,7 @@ You can now start to reconstruct a maximum-likelihood (ML) tree for the turtle d
 ```
 #SBATCH parameters
 
+source /project/sackettl/miniconda3/etc/profile.d/conda.sh
 source activate IQt_env
 
 iqtree -s /project/sackettl/MolEvol/data/turtle.fa -bb 1000 -nt AUTO
@@ -79,7 +80,7 @@ iqtree -s turtle.fa -spp turtle.nex -bb 1000 -nt AUTO
 where the -spp turtle.nex part specifies an [edge-linked proportional partition model](https://academic.oup.com/sysbio/article/65/6/997/2281634). This means that there is only one set of branch lengths, but each partition can have proportionally shorter or longer tree length, representing slow or fast evolutionary rate, respectively.
 * Look at the report file turtle.nex.iqtree. What are the lowest- and highest-evolving genes?
 * Compare the AIC/AICc/BIC score of partition model versus un-partition model above. Which model is better?
-* Visualize the tree turtle.nex.treefile in FigTree and compare it with teh tree from the unpartitioned model. Are they the same or different? If different, where is the difference? Which tree agrees with [the published tree](https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-10-65)?
+* Visualize the tree turtle.nex.treefile in FigTree and compare it with the tree from the unpartitioned model. Are they the same or different? If different, where is the difference? Which tree agrees with [the published tree](https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-10-65)?
 * Look at the bootstrap support values. Which branches have low support?
 
 
@@ -87,7 +88,7 @@ where the -spp turtle.nex part specifies an [edge-linked proportional partition 
 
 Let's perform the [PartitionFinder](https://academic.oup.com/mbe/article/29/6/1695/1000514) algorithm that tries to merge partitions to reduce the potential over-parameterization.
 ```
-iqtree -s turtle.fa -spp turtle.nex -bb 1000 -nt AUTO -m MFP+MERGE -rculster 10 -pre turtle.merge
+iqtree -s turtle.fa -spp turtle.nex -bb 1000 -nt AUTO -m MFP+MERGE -rcluster 10 -pre turtle.merge
 ```
 where
 > * -m MFP+MERGE performs PartitionFinder followed by tree reconstruction
@@ -109,25 +110,31 @@ First, concatenate the trees constructed by single and partition models into one
 ```
 cat turtle.fa.treefile turtle.nex.treefile > turtle.trees
 ```
+Or, more generally
+```
+cat unpartitioned.treefile partitioned.treefile > all.trees
+```
+
 (for Windows computers, replace 'cat' with 'type')
 
 Now, pass this file to IQ-TREE via the ```-z``` option:
 ```
-iqtree -s turtle.fa -spp turtle.nex.best_scheme.nex -z turtle.trees -zb 1000 -n 0 -wpl -pre turtle.test
+iqtree2 -s turtle.fa -p yourfolder/turtle.nex.best_scheme.nex -z turtle.trees -n 0 -wpl --prefix turtle.test
 ```
 where
-* ```-spp turtle.nex.best_scheme.nex``` provides the partition model found previously to avoid running ModelFinger again
+* ```-p turtle.nex.best_scheme.nex``` provides the partition model found previously to avoid running ModelFinger again
 * ```-z turtle.trees``` inputs a set of trees
-* ```-zb 1000``` specifies 1000 replicates for approximate bootstrap for tree topology tests
 * ```-n 0``` avoids tree search and just performs tree topology tests
 * ```-wpl``` prints partition-wise log likelihoods for both trees
-* ```-pre turtle.test``` sets the prefix for all output files to turtle.text
+* ```--prefix turtle.test``` sets the prefix for all output files to turtle.text
 
 :::success
 Look at the report file ```turtle.test.iqtree```. There is a new section called USER TREES. Do the two trees have significantly different log-likelihoods?
 
 
-:bulb: **Hint:** The KH and SH tests return p-values. bp-RELL and c-ELW return posterior weights, which are **not** p-values. The weights sum to 1 across all trees tested.
+:bulb: **Hint:** To assess whether models are significantly different using likelihood, we use a Likelihood Ratio Test (LRT) between the two models. If one model is significantly better than the other, the ratio will differ from 1. [See here](https://stephens999.github.io/fiveMinuteStats/likelihood_ratio_simple_models.html) for an example.
+
+:bulb: **Hint 2:** The KH and SH tests return p-values. bp-RELL and c-ELW return posterior weights, which are **not** p-values. The weights sum to 1 across all trees tested.
 
 :::
 
@@ -160,7 +167,7 @@ You can now compute gCF and sCF for the tree inferred under the partition model:
 iqtree -t turtle.nex.treefile --gcf turtle.loci.treefile -s turtle.fa --scf 100
 ```
 where
-* ```-t turtle.next.treefile``` specifies a species tree
+* ```-t turtle.nex.treefile``` specifies a species tree
 * ```--gcf turtle.loci.treefile``` specifies a gene-trees file
 * ```--scf 100``` draws 100 random quartets when computing sCF
 
