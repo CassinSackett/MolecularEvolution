@@ -83,27 +83,5 @@ although not all commands need options or targets.
 
 
 
-Course and Project Timeline
----
-```mermaid
-gantt
-    title Approximate Course Schedule
-
-    section Me talking
-    Lectures           :a1, 2023-01-10, 120d
-    section You doing
-    Bioinformatics     :a2, 2023-01-10, 120d
-    Projects           :a2, 2023-02-12  , 90d
-    Exam 1      :2023-03-12, 2d
-    Exam 2      : 2023-05-12, 2d
-```
-
-
-
-## Appendix and FAQ
-
-:::info
-**Find this document incomplete?** Leave a comment!
-:::
 
 ###### tags: `Courses` `Documentation`
